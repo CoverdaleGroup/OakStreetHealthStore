@@ -34,6 +34,11 @@
 .jumbotron h2 img {
     max-height: 100%;
 }
+
+.thumbnail img {
+    max-height:225px;
+}
+
 /*price badge styles*/
 .badge {
     background-color: #ffffff;

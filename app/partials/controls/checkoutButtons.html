@@ -1,17 +1,17 @@
 <ul>
-    <style ng-if="continue">
+    <style>
         .navbar-fixed-bottom ul li:nth-of-type(1) {
-            width: 20%;
+            width: 33%;
         }
         .navbar-fixed-bottom ul li:nth-of-type(2) {
-            width: 20%;
+            width: 33%;
         }
         .navbar-fixed-bottom ul li:nth-of-type(3) {
-            width: 20%;
+            width: 34%;
         }
-        .navbar-fixed-bottom ul li:last-child {
+        /* .navbar-fixed-bottom ul li:last-child {
             width: 40%;
-        }
+        } */
     </style>
     <li ng-if="continue">
         <button type="button" class="btn btn-info" redirect="catalog">
@@ -31,12 +31,12 @@
             {{('Save' | r) + ' ' + ('Order' | r) | xlat}}
         </button>
     </li>
-    <li>
+    <!--<li>
         <button class="btn"
                 ng-class="{'btn-warning': cart_shipping.$invalid || cart_order.$invalid || cart_billing.$invalid || submitClicked, 'btn-success': !cart_shipping.$invalid && !cart_order.$invalid && !cart_billing.$invalid || !submitClicked }"
                 ng-click="submitOrder()" ng-disabled="cart_shipping.$invalid || cart_order.$invalid || cart_billing.$invalid || submitClicked">
             <i ng-show="cart_shipping.$invalid || cart_order.$invalid || cart_billing.$invalid || submitClicked" class="fa fa-warning"></i>
             <span>{{('Submit' | r) + ' ' + ('Order' | r) | xlat}}</span>
         </button>
-    </li>
+    </li>-->
 </ul>

@@ -165,6 +165,12 @@
                             <h4 class="text-primary">
                                 <strong>{{'Subtotal' | r | xlat}} <span class="text-success">{{currentOrder.Subtotal | culturecurrency}}</span></strong>
                             </h4>
+                            
+                            <button type="button" class="btn" ng-class="{'btn-warning': cart.$invalid, 'btn-success': !cart.$invalid }" ng-click="checkOut()" ng-disabled="cart.$invalid || kitValidation">
+                                <i ng-show="cart.$invalid || kitValidation" class="fa fa-warning"></i>
+                                <span>{{'Check Out' | r | xlat}} {{window.outerWidth}}</span>
+                            </button>
+                            
                             <p ng-show="TaxMethod" ng-if="user.Company.TaxMethod != 'NoTax'">
                                 <span class="text-info">{{'Shipping, handling and tax may be added to this subtotal.' | r | xlat}}</span>
                             </p>

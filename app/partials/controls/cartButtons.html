@@ -1,17 +1,17 @@
 <ul>
-    <style ng-if="continue">
+    <style>
         .navbar-fixed-bottom ul li:nth-of-type(1) {
-            width: 25%;
+            width: 33%;
         }
         .navbar-fixed-bottom ul li:nth-of-type(2) {
-            width: 20%;
+            width: 33%;
         }
         .navbar-fixed-bottom ul li:nth-of-type(3) {
-            width: 20%;
+            width: 34%;
         }
-        .navbar-fixed-bottom ul li:last-child {
+        /* .navbar-fixed-bottom ul li:last-child {
             width: 35%;
-        }
+        } */
     </style>
     <li ng-if="continue">
         <button type="button" class="btn btn-info" redirect="catalog">
@@ -31,10 +31,10 @@
             <small>{{('Save' | r) + ' ' + ('Order' | r) | xlat}}</small>
         </button>
     </li>
-    <li>
+    <!--<li>
         <button type="button" class="btn" ng-class="{'btn-warning': cart.$invalid, 'btn-success': !cart.$invalid }" ng-click="checkOut()" ng-disabled="cart.$invalid || kitValidation">
             <i ng-show="cart.$invalid || kitValidation" class="fa fa-warning"></i>
             <span>{{'Check Out' | r | xlat}} {{window.outerWidth}}</span>
         </button>
-    </li>
+    </li>-->
 </ul>
